@@ -274,7 +274,7 @@ async function loadDadosJson(currentSunday) {
   const end = dateEnd.toISOString()
 
 
-  const response = await fetch(`https://localhost:8443/agenda?start=${start}&end=${end}`,{
+  const response = await fetch(`/agenda?start=${start}&end=${end}`,{
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -289,7 +289,7 @@ async function saveDadosJson(timestamp, appt) {
 
   //enviando request POST pro server
   try {
-  const response = await fetch("https://localhost:8443/agenda", {
+  const response = await fetch("/agenda", {
     method: "POST",
     credentials: "include",
     headers: {
