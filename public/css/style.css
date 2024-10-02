@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+section {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 100px);
+}
+
+header {
+  height: 100px;
+
+}
+
+aside {
+  flex-basis: 30%;
+  max-width: 250px;
+  align-self: stretch;
+}
+
+main {
+  flex-grow: 1;
+  align-self: stretch;
+  padding: 15px;
+}
+
+nav {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.calendar {
+  min-width: 700px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.calendar-header {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 80px repeat(7, minmax(50px, 1fr));
+  grid-template-rows: 100px;
+  gap: 2px;
+  margin: 0;
+  background: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.calendar-body {
+  grid-area: agenda;
+  /* background: #e6e0e0ac; */
+  display: grid;
+  grid-template-columns: 80px repeat(7, minmax(50px, 1fr));
+  /* grid-template-rows: 120px repeat(14, 120px);   */
+
+  gap: 2px;
+}
+
+
+
+.hora {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  align-content: space-evenly;
+}
+
+.day-title {
+  font-size: 15px;
+  margin-top: 10%;
+  font-family: 'Courier New', Courier, monospace;
+  width: 60px;
+  height: 60px;
+  align-content: center;
+  border-radius: 50px;
+  background: #eee;
+
+}
+
+.horario {
+  /* background: #b70c0c; */
+  align-content: space-evenly;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.month {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 8pt;
+  align-self: center;
+
+
+}
+
+
+.calendar-header>div {
+  display: flex;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+.calendar-body>div {
+  background-color: #ddd;
+  text-align: center;
+  padding:20px 5px;
+}
+
+.calendar-body > div input[type=text] {
+    width:90%;
+}
+
+
+.calendar-body>div:nth-child(16n+1),
+.calendar-body>div:nth-child(16n+2),
+.calendar-body>div:nth-child(16n+3),
+.calendar-body>div:nth-child(16n+4),
+.calendar-body>div:nth-child(16n+5),
+.calendar-body>div:nth-child(16n+6),
+.calendar-body>div:nth-child(16n+7),
+.calendar-body>div:nth-child(16n+8) {
+  background-color: #ccc;
+  text-align: center;
+}
+
+.calendar-body>div:nth-child(1),
+.calendar-body>div:nth-child(8n+1) {
+  display: flex;
+  background: white;
+  justify-content: end;
+}
+
+.calendar-body>div:not(.horario):hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+
+.today {
+  background-color: blue;
+  color: white;
+
+}
+
+
+.nav-week {
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #eee;
+
+
+}
+
+.nav-week:hover {
+  background-color: #ccc;
+  color: white;
+}
+
+
+.logo {
+  width: 250px;
+  height: 250px;
+  /* position: absolute; */
+}
