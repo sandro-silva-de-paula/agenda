@@ -18,7 +18,7 @@ const { Client } = pg
 
 
 /// servindo aquivos estaticos nas pasta
-server.use(express.static('/home/sandrosilva/Documents/agenda/public'));
+server.use(express.static('../public'));
 
 
 server.use(
